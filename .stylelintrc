@@ -1,0 +1,16 @@
+{
+    "extends": [
+        "stylelint-config-recommended-scss"
+    ],
+    "rules": {
+        "selector-class-pattern": "^.[a-z]([a-z0-9-]+)?(__([a-z0-9]+-?)+)?(--([a-z0-9]+-?)+){0,2}$",
+        "declaration-block-no-duplicate-properties": true,
+        "annotation-no-unknown": true,
+        "length-zero-no-unit": true,
+        "selector-disallowed-list": [
+            "/^#/"
+        ],
+        "function-name-case": "lower",
+        "max-nesting-depth": 3
+    }
+}
