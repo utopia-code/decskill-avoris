@@ -1,0 +1,107 @@
+/*------------------------------------*\
+   #FONTS
+\*------------------------------------*/
+
+/* NUNITO */
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../assets/fonts/Nunito/Nunito-ExtraLight.woff2') format('woff2'),
+       url('../assets/fonts/Nunito/Nunito-ExtraLight.woff') format('woff'),
+       url('../assets/fonts/Nunito/Nunito-ExtraLight.otf') format('opentype');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../assets/fonts/Nunito/Nunito-Light.woff2') format('woff2'),
+       url('../assets/fonts/Nunito/Nunito-Light.woff') format('woff'),
+       url('../assets/fonts/Nunito/Nunito-Light.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../assets/fonts/Nunito/Nunito-Regular.woff2') format('woff2'),
+       url('../assets/fonts/Nunito/Nunito-Regular.woff') format('woff'),
+       url('../assets/fonts/Nunito/Nunito-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../assets/fonts/Nunito/Nunito-Medium.woff2') format('woff2'),
+       url('../assets/fonts/Nunito/Nunito-Medium.woff') format('woff'),
+       url('../assets/fonts/Nunito/Nunito-Medium.otf') format('opentype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../assets/fonts/Nunito/Nunito-SemiBold.woff2') format('woff2'),
+       url('../assets/fonts/Nunito/Nunito-SemiBold.woff') format('woff'),
+       url('../assets/fonts/Nunito/Nunito-SemiBold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../assets/fonts/Nunito/Nunito-Bold.woff2') format('woff2'),
+       url('../assets/fonts/Nunito/Nunito-Bold.woff') format('woff'),
+       url('../assets/fonts/Nunito/Nunito-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../assets/fonts/Nunito/Nunito-ExtraBold.woff2') format('woff2'),
+       url('../assets/fonts/Nunito/Nunito-ExtraBold.woff') format('woff'),
+       url('../assets/fonts/Nunito/Nunito-ExtraBold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Nunito';
+  src: url('../assets/fonts/Nunito/Nunito-Black.woff2') format('woff2'),
+       url('../assets/fonts/Nunito/Nunito-Black.woff') format('woff'),
+       url('../assets/fonts/Nunito/Nunito-Black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* SYNE */
+
+@font-face {
+  font-family: 'Syne';
+  src: url('../assets/fonts/Syne/Syne-Regular.woff2') format('woff2'),
+       url('../assets/fonts/Syne/Syne-Regular.woff') format('woff'),
+       url('../assets/fonts/Syne/Syne-Regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Syne';
+  src: url('../assets/fonts/Syne/Syne-Bold.woff2') format('woff2'),
+       url('../assets/fonts/Syne/Syne-Bold.woff') format('woff'),
+       url('../assets/fonts/Syne/Syne-Bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}

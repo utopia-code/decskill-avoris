@@ -1,0 +1,53 @@
+/*------------------------------------*\
+   #BASE
+\*------------------------------------*/
+
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: 'Nunito', sans-serif;
+    font-size: $font-size-base;
+    font-weight: 400;
+    color: $text_body;
+    max-width: $mq-xl;
+    margin: 0 auto;
+}
+
+h1, h2, h3 {
+    font-family: 'Syne', sans-serif;
+} 
+
+h2 {
+    color: $text_title;
+} 
+
+a {
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+}
+
+ul {
+    padding: 0; 
+    margin: 0;
+    list-style-type: none;
+}
+
+.btn {
+    padding: 10px 30px;
+    border-radius: 20px;
+
+    &.btn__primary {
+        background-color: $color_secondary;
+        color: $text_light;
+    }
+}

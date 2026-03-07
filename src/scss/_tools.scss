@@ -1,0 +1,21 @@
+/*------------------------------------*\
+   #TOOLS
+\*------------------------------------*/
+
+/* BREAKPOINTS */
+
+@mixin for-size($size) {
+    @if $size == mobile {
+        @media (max-width: $mq-xs) { @content; }
+    } @else if $size == small-devices {
+        @media (max-width: $mq-s) { @content; }
+    } @else if $size == tablet {
+        @media (min-width: ($mq-s + .5px)) { @content; }
+    } @else if $size == m-devices {
+        @media (min-width: $mq-m) { @content; }
+    } @else if $size == desktop {
+        @media (min-width: $mq-lg) { @content; }
+    } @else if $size == big-devices {
+        @media (min-width: $mq-xl) { @content; }
+    }
+}
