@@ -1,0 +1,37 @@
+<script type="module" locals>
+    module.exports = {
+        destinations: [
+            { id: 'paris', label: 'París' },
+            { id: 'rome', label: 'Roma' },
+            { id: 'london', label: 'Londres' },
+            { id: 'new-york', label: 'Nueva York' },
+            { id: 'tokyo', label: 'Tokio' },
+            { id: 'sydney', label: 'Sídney' },
+            { id: 'cairo', label: 'El Cairo' },
+            { id: 'rio', label: 'Río de Janeiro' },
+            { id: 'cape-town', label: 'Ciudad del Cabo' },
+            { id: 'barcelona', label: 'Barcelona' },
+            { id: 'amsterdam', label: 'Ámsterdam' },
+            { id: 'bali', label: 'Bali' },
+            { id: 'dubai', label: 'Dubái' },
+            { id: 'athens', label: 'Atenas' },
+            { id: 'moscow', label: 'Moscú' },
+            { id: 'prague', label: 'Praga' },
+            { id: 'lisbon', label: 'Lisboa' },
+            { id: 'bangkok', label: 'Bangkok' },
+            { id: 'san-francisco', label: 'San Francisco' },
+            { id: 'hong-kong', label: 'Hong Kong' }
+        ]
+    }
+</script>
+
+<each loop="destination, index in destinations">
+    <div class="checkbox {{ index >8 ? 'checkbox--hidden' : '' }}">
+        <input lass="checkbox__input" type="checkbox" id="{{ destination.id }}" name="destinations[]" value="{{ destination.id }}">
+        <label class="checkbox__label" for="{{ destination.id }}">{{ destination.label }}</label>
+        <div class="checkbox__tooltip--wrapper">
+            <img class="checkbox__tooltip--icon" src="./assets/icons/info.svg" aria-label="Más información"></img>
+            <span class="checkbox__tooltip--text">Lorem ipsum</span>
+        </div>
+    </div>
+</each>

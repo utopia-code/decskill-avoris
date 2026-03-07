@@ -1,0 +1,78 @@
+<form class="filters accordion">
+
+    <details class="accordion__item">
+        <summary class="accordion__header">
+            <span class="accordion__icon">
+                <include src="./views/icons/earth-svg.html"></include>
+            </span>
+            <span class="accordion__title">Destinos</span>
+        </summary>
+
+        <fieldset class="accordion__content filter__group">
+            <legend class="filter__legend--hidden">Destinos</legend>
+            <include src="./views/filters/group/destination.html"></include>
+            <button type="button" class="filter__button filter__button--show-all">Ver más</button>
+        </fieldset>
+    </details>
+
+    <details class="accordion__item">
+        <summary class="accordion__header">
+            <span class="accordion__icon">
+                <include src="./views/icons/mountains-svg.html"></include>
+            </span>
+            <span class="accordion__title">Aventura</span>
+        </summary>
+
+        <fieldset class="accordion__content filter__group">
+            <legend class="filter__legend--hidden">Aventura</legend>
+            <include src="./views/filters/group/adventure.html"></include>
+            <button type="button" class="filter__button filter__button--show-all">Ver más</button>
+        </fieldset>
+    </details>
+
+    <details class="accordion__item">
+        <summary class="accordion__header">
+            <span class="accordion__icon">
+                <include src="./views/icons/house-svg.html"></include>
+            </span>
+            <span class="accordion__title">Alojamiento</span>
+        </summary>
+
+        <fieldset class="accordion__content filter__group">
+            <legend class="filter__legend--hidden">Alojamiento</legend>
+            <include src="./views/filters/group/accommodation.html"></include>
+            <button type="button" class="filter__button filter__button--show-all">Ver más</button>
+        </fieldset>
+    </details>
+
+    <details class="accordion__item">
+        <summary class="accordion__header">
+            <span class="accordion__icon">
+                <include src="./views/icons/tag-svg.html"></include>
+            </span>
+            <span class="accordion__title">Precio</span>
+        </summary>
+
+        <fielset class="accordion__content">
+            <legend class="filter__legend--hidden">Precio</legend>
+
+            <label class="filter__label filter__label--hidden" for="min-price">Mínimo</label>
+            <div class="filter__input--wrapper">
+                <span class="filter__input--icon">
+                    <include src="./views/icons/tag-svg.html"></include>
+                </span>
+                <input class="filter__input filter__input--text" type="text" pattern="[0-9]*" id="min-price" placeholder="Mínimo">
+            </div>
+
+            <label class="filter__label filter__label--hidden" for="max-price">Máximo</label>
+            <div class="filter__input--wrapper">
+                <span class="filter__input--icon">
+                    <include src="./views/icons/tag-svg.html"></include>
+                </span>
+                <input class="filter__input filter__input--text" type="text" pattern="[0-9]*" id="max-price" placeholder="Máximo">
+            </div>
+
+        </fielset>
+    </details>
+    
+</form>

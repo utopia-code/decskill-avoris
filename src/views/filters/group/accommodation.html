@@ -1,0 +1,37 @@
+<script type="module" locals>
+    module.exports = {
+        accommodations: [
+            { id: 'hotel', label: 'Hotel' },
+            { id: 'hostel', label: 'Hostal' },
+            { id: 'apartment', label: 'Apartamento' },
+            { id: 'villa', label: 'Villa' },
+            { id: 'bnb', label: 'Bed & Breakfast' },
+            { id: 'guesthouse', label: 'Casa de Huéspedes' },
+            { id: 'resort', label: 'Resort' },
+            { id: 'cabin', label: 'Cabaña' },
+            { id: 'chalet', label: 'Chalet' },
+            { id: 'condo', label: 'Condominio' },
+            { id: 'lodge', label: 'Lodge' },
+            { id: 'glamping', label: 'Glamping' },
+            { id: 'farmstay', label: 'Estancia en Granja' },
+            { id: 'boutique-hotel', label: 'Boutique Hotel' },
+            { id: 'inn', label: 'Posada' },
+            { id: 'motel', label: 'Motel' },
+            { id: 'house-rental', label: 'Casa en Alquiler' },
+            { id: 'treehouse', label: 'Casa en Árbol' },
+            { id: 'hostel-dorm', label: 'Dormitorio de Hostal' },
+            { id: 'camping', label: 'Camping' }
+        ]
+    }
+</script>
+
+<each loop="accommodation, index in accommodations">
+    <div class="checkbox {{ index >8 ? 'checkbox--hidden' : '' }}">
+        <input lass="checkbox__input" type="checkbox" id="{{ accommodation.id }}" name="accommodations[]" value="{{ accommodation.id }}">
+        <label class="checkbox__label" for="{{ accommodation.id }}">{{ accommodation.label }}</label>
+        <div class="checkbox__tooltip--wrapper">
+            <img class="checkbox__tooltip--icon" src="./assets/icons/info.svg" aria-label="Más información"></img>
+            <span class="checkbox__tooltip--text">Lorem ipsum</span>
+        </div>
+    </div>
+</each>

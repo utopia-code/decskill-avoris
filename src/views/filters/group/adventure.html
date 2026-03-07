@@ -1,0 +1,37 @@
+<script type="module" locals>
+    module.exports = {
+        adventures: [
+            { id: 'quads', label: 'Quads' },
+            { id: 'paragliding', label: 'Parapente' },
+            { id: 'rafting', label: 'Rafting' },
+            { id: 'explore', label: 'Explora' },
+            { id: 'diving', label: 'Buceo' },
+            { id: 'parachute', label: 'Paracaídas' },
+            { id: 'snowboard', label: 'Snowboard' },
+            { id: 'surf', label: 'Surf' },
+            { id: 'kayak', label: 'Kayak' },
+            { id: 'hiking', label: 'Senderismo' },
+            { id: 'biking', label: 'Bicicleta de montaña' },
+            { id: 'caving', label: 'Espeleología' },
+            { id: 'skiing', label: 'Esquí' },
+            { id: 'windsurf', label: 'Windsurf' },
+            { id: 'climbing', label: 'Escalada' },
+            { id: 'zipline', label: 'Tirolina' },
+            { id: 'hotairballoon', label: 'Globo aerostático' },
+            { id: 'rafting-extreme', label: 'Rafting extremo' },
+            { id: 'sailing', label: 'Vela' },
+            { id: 'snorkeling', label: 'Snorkel' }
+        ]
+    }
+</script>
+
+<each loop="adventure, index in adventures">
+    <div class="checkbox {{ index >8 ? 'checkbox--hidden' : '' }}">
+        <input lass="checkbox__input" type="checkbox" id="{{ adventure.id }}" name="adventure[]" value="{{ adventure.id }}">
+        <label class="checkbox__label" for="{{ adventure.id }}">{{ adventure.label }}</label>
+        <div class="checkbox__tooltip--wrapper">
+            <img class="checkbox__tooltip--icon" src="./assets/icons/info.svg" aria-label="Más información"></img>
+            <span class="checkbox__tooltip--text">Lorem ipsum</span>
+        </div>
+    </div>
+</each>
