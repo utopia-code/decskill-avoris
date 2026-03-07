@@ -1,0 +1,76 @@
+<script type="module" locals>
+    module.exports = {
+        cards: [
+
+            { image: '0e3246fd90c68b5d92ab37a2345777fbe0a0d253.jpg', price_detail: '1001' },
+            { image: 'pexels-zakariahanif-12214734.jpg', price_detail: '1002' },
+            { image: 'pexels-rayraimundo-18472285.jpg', price_detail: '1003' },
+            { image: '0e3246fd90c68b5d92ab37a2345777fbe0a0d253.jpg', price_detail: '1004' },
+            { image: 'pexels-zakariahanif-12214734.jpg', price_detail: '1005' },
+            { image: 'pexels-rayraimundo-18472285.jpg', price_detail: '1006' },
+            { image: '0e3246fd90c68b5d92ab37a2345777fbe0a0d253.jpg', price_detail: '1007' },
+            { image: 'pexels-zakariahanif-12214734.jpg', price_detail: '1008' },
+            { image: 'pexels-rayraimundo-18472285.jpg', price_detail: '1009' }
+        ]
+    }
+</script>
+
+<each loop="card in cards">
+
+    <div class="grid__cards--item card">
+        <div class="card__media">
+            <div class="card__badge">Quads</div>
+            <picture>
+                <source type="image/avif" srcset="./assets/images/{{ card.image }}?as=avif">
+                <source type="image/webp" srcset="./assets/images/{{ card.image }}?as=webp">
+                <source type="image/jpg" srcset="./assets/images/{{ card.image }}">
+
+                <img class="card__image" src="./assets/images/{{ card.image }}" alt="image destination {{ card. }}">
+            </picture>
+        </div>
+        
+        <div class="card__body">
+            <span class="card__title--destination">Marruecos, África</span><span class="card-title--duration">9 días</span>
+            <h4 class="card__title">{{ card[3] }}</h4>
+
+            <div class="card__row">
+                <div class="card__price">
+                    <span class="card__price--min">Desde</span>
+                    <p class="card__price--amount">248,00<span class="current__currency"> €</span></p>
+
+                    <button class="card__price--show-details" type="button" data-dropdown="{{ card.price_detail }}">
+                        <span class="card__price--show-details-text">Ver desglose</span> 
+                        <img class="card__price--show-details-img" src="./assets/icons/chevron-down.svg" aria-label="Mostrar desglose"></img>
+                    </button>
+                </div>
+                <div class="card__cta">
+                    <button class="card__btn btn btn_cta" type="button">Reservar</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="dropdown" data-dropdown="{{ card.price_detail }}" hidden role="region" aria-labelledby="Desglose de precios">
+        <div class="dropdown__header">
+            <h4 class="dropdown__header--title">Desglose de precios</h4>
+            <button class="dropdown__close">
+                <include src="./views/icons/close-svg.html"></include>
+            </button>
+        </div>
+        <div class="dropdown__body">
+            <h4 class="dropdown__title">
+                Marruecos, África
+                <span class="dropdown__subtitle">9 días</span>
+            </h4>
+            <dl class="dropdown__list">
+                <dt>Precio antes de impuestos</dt><dd>1.124,00<span class="current__currency"> €</span></dd>
+                <dt>Impuesto</dt><dd>4,43<span class="current__currency"> €</span></dd>
+                <dt>Lorem ipsum</dt><dd>150,42<span class="current__currency"> €</span></dd>
+            </dl>
+        </div>
+        <div class="dropdown__footer">
+            <h4 class="dropdown__footer--title">Precio final</h4>
+            <div class="dropdown__highlighted">2.455,00<span class="current__currency"> €</span></div>
+        </div>
+    </div>
+</each>
