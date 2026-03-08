@@ -1,0 +1,111 @@
+/*------------------------------------*\
+   #CARDS
+\*------------------------------------*/
+
+.grid__cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(244px, 1fr));
+    gap: 20px;
+} 
+
+.card {
+    border-radius: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+} 
+
+.card__media {
+    position: relative;
+    border-radius: 20px 20px 0 0;
+    overflow: hidden;
+}
+
+.card__badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: $color_primary;
+    padding: 2px 8px;
+    font-size: 1.1rem;
+    font-weight: 700;
+    border-radius: 20px;
+}
+
+.card__media picture {
+    display: block;
+    overflow: hidden;
+}
+
+.card__image {
+    display: block;
+    object-fit: cover;
+}
+
+.card__body {
+    padding: 15px;
+}
+
+.card__title--destination,
+.card__title--duration {
+    font-size: 1.4rem;
+} 
+
+.card__title--destination {
+    font-weight: 600;
+    color: $color_secondary;
+    font-family: 'Syne', sans-serif;
+}
+
+.card__title {
+    margin: 0;
+    margin-top: 5px;
+}
+
+.card__footer {
+    border-radius: 0 0 20px 20px;
+    overflow: hidden;
+    background-color: $bg_color_primary;
+}
+
+.card__row {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+}
+
+.card__price--min {
+    font-size: 1.2rem;
+}
+
+.card__price--amount {
+    font-size: 1.9rem;
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 0;
+}
+
+.card__price--show-details {
+    appearance: none;
+    border: none;
+    background: none;
+    padding: 0;
+    padding-bottom: 20px;
+    font-size: 1.3rem;
+    color: $color_secondary;
+    cursor: pointer;
+    text-decoration: underline;
+}
+
+.card__price--show-details-icon svg {
+    width: 14px;
+    height: 14px;
+}
+
+.card__cta {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.card__btn {
+    padding: 10px 15px;
+}

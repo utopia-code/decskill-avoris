@@ -1,0 +1,19 @@
+/*------------------------------------*\
+   #CHECKBOX
+\*------------------------------------*/
+
+.checkbox {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    font-size: 1.4rem;
+}
+
+.checkbox__label {
+    padding-right: 5px;
+    padding-left: 5px;
+}
+
+.checkbox__tooltip--wrapper {
+    height: $size-icon-sm;
+}

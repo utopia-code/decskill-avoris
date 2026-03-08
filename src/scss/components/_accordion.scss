@@ -1,0 +1,39 @@
+/*------------------------------------*\
+   #ACCORDION
+\*------------------------------------*/
+
+.accordion__header {
+    display: flex;
+    align-items: center;
+    padding-bottom: 20px;
+    list-style: none;
+
+    &:-webkit-details-marker {
+        display: none;
+    }
+
+    &::marker {
+        content: "";
+    }
+}
+
+.accordion__icon {
+    height: $size-icon;
+    margin-right: 5px;
+}
+
+.accordion__marker {
+    height: $size-icon;
+    margin-left: auto;
+    transform: rotate(-100grad);
+}
+
+.accordion__item[open] {
+    .accordion__header {
+        color: $text_highlighted;
+    }
+
+    .accordion__marker {
+        transform: rotate(0grad);
+    }
+}
