@@ -1,0 +1,38 @@
+<div class="grid__cards--item card">
+    <div class="card__media">
+        <div class="card__badge">Quads</div>
+        <picture>
+            <source type="image/avif" srcset="./assets/images/{{ image }}?as=avif">
+            <source type="image/webp" srcset="./assets/images/{{ image }}?as=webp">
+            <source type="image/jpg" srcset="./assets/images/{{ image }}">
+
+            <img class="card__image" src="./assets/images/{{ image }}" alt="">
+        </picture>
+    </div>
+
+    <div class="card__body">
+        <span class="card__title--destination">Marruecos, África</span>
+        <span class="card__title--duration">9 días</span>
+        <h4 class="card__title">Descubre Bangkok con Iberojet</h4>
+    </div>
+
+    <div class="card__footer">
+        <div class="card__row">
+            <div class="card__price">
+                <span class="card__price--min">Desde</span>
+                <p class="card__price--amount">248,00<span class="current__currency"> €</span></p>
+
+                <button class="card__price--show-details" type="button" data-dropdown="{{ price_detail }}">
+                    <span class="card__price--show-details-text">Ver desglose</span>
+                    <span class="card__price--show-details-icon">
+                        <include src="./views/icons/chevron-svg.html"></include>
+                    </span>
+                </button>
+            </div>
+
+            <div class="card__cta">
+                <button class="card__btn btn btn__cta" type="button">Reservar</button>
+            </div>
+        </div>
+    </div>
+</div>
