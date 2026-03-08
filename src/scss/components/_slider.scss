@@ -4,7 +4,7 @@
 
 .slider {
     position: relative;
-    height: 400px;
+    height: $slider-heigth;
 }
 
 .slide {
@@ -23,6 +23,12 @@
 .slide__heading,
 .slide__heading--subtitle {
     color: $text_light;
+}
+
+.slide__heading {
+    max-width: calc(100% - 100px);
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .slide__heading--subtitle {
@@ -86,4 +92,10 @@
 
 .slider__dot--active {
     background-color: $color_primary;
+}
+
+@include for-size(small-devices) {
+    .slide__heading--subtitle {
+        font-size: 2.3rem;
+    }
 }
