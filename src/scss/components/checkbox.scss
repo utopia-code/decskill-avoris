@@ -16,4 +16,47 @@
 
 .checkbox__tooltip--wrapper {
     height: $size-icon-sm;
+    position: relative;
+    cursor: pointer;
+}
+
+.checkbox__tooltip--text {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    width: max-content;
+    background: #fff;
+    text-align: center;
+    padding: 6px 8px;
+    border-radius: 4px;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%;
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    visibility: hidden;
+    transition: .15s ease;
+
+    &:after {
+        content: "";
+        position: absolute;
+        bottom: -17px;
+        left: 50%;
+        transform: translateX(-50%);
+        border-width: 10px;
+        border-style: solid;
+        border-color: #fff transparent transparent transparent;
+    }
+}
+
+.checkbox__tooltip--wrapper {
+    &:hover {
+        .checkbox__tooltip--text {
+            opacity: 1;
+            visibility: visible;
+        }
+    }
+} 
+
+.checkbox--hidden {
+    display: none;
 }
