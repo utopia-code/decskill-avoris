@@ -21,6 +21,29 @@
     color: $color_secondary;
     font-size: 1.4rem;
     font-weight: 600;
-    padding: 5px 20px;
+    padding: 20px 20px 5px;
     background-color: $bg_color_secondary;
+}
+
+.header,
+.footer,
+.container {
+    max-width: 1650px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+
+.container__wrapper {
+    padding: 20px;
+
+    @include for-size(tablet) {
+        max-width: 724px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    @include for-size(m-devices) {
+        max-width: 1107px;
+    }
 }

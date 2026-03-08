@@ -8,9 +8,9 @@
     @if $size == mobile {
         @media (max-width: $mq-xs) { @content; }
     } @else if $size == small-devices {
-        @media (max-width: $mq-s) { @content; }
+        @media (max-width: ($mq-s - .5px)) { @content; }
     } @else if $size == tablet {
-        @media (min-width: ($mq-s + .5px)) { @content; }
+        @media (min-width: $mq-s) { @content; }
     } @else if $size == m-devices {
         @media (min-width: $mq-m) { @content; }
     } @else if $size == desktop {
