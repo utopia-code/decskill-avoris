@@ -14,3 +14,9 @@
     font-size: 1.9rem;
     color: $text_subtitle;
 }
+
+@include for-size(small-devices) {
+    .heading__subtitle {
+        font-size: 1.7rem;
+    }
+}
