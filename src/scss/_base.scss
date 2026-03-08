@@ -52,6 +52,12 @@ p {
     transition: .15s ease;
 
     &.btn__primary {
+        background-color: $color_primary;
+        color: $text_dark;
+        border: none;
+    }
+
+    &.btn__secondary {
         background-color: $color_secondary;
         color: $text_light;
     }

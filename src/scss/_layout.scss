@@ -14,12 +14,13 @@
     justify-content: center;
     padding: 45px 20px;
     background-color: $bg_color_primary;
+    border-top: 1px solid $bg_color_secondary;
 }
 
 .footer__copyright {
     text-align: center;
     color: $color_secondary;
-    font-size: 1.4rem;
+    font-size: 1.2rem;
     font-weight: 600;
     padding: 20px 20px 5px;
     background-color: $bg_color_secondary;
