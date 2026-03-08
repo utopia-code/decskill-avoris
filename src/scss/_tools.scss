@@ -13,6 +13,8 @@
         @media (min-width: $mq-s) { @content; }
     } @else if $size == m-devices {
         @media (min-width: $mq-m) { @content; }
+    } @else if $size == l-devices {
+        @media (min-width: $mq-l) { @content; }
     } @else if $size == desktop {
         @media (min-width: $mq-lg) { @content; }
     } @else if $size == big-devices {
