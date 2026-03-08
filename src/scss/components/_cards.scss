@@ -4,13 +4,13 @@
 
 .grid__cards {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(244px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(242px, 1fr));
     gap: 20px;
 } 
 
 .card {
     border-radius: 20px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
 } 
 
 .card__media {
@@ -47,12 +47,12 @@
 .card__title--destination,
 .card__title--duration {
     font-size: 1.4rem;
+    font-family: 'Syne', sans-serif;
 } 
 
 .card__title--destination {
     font-weight: 600;
     color: $color_secondary;
-    font-family: 'Syne', sans-serif;
 }
 
 .card__title {
@@ -108,4 +108,40 @@
 
 .card__btn {
     padding: 10px 15px;
+}
+
+@include for-size(small-devices) {
+    .card__row {
+        flex-direction: column;
+    }
+
+    .card__price {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        grid-template-rows: repeat(2, auto);
+        justify-content: space-between;
+    }
+
+    .card__price--min {
+        grid-column: 2;
+        grid-row: 1;
+    }
+
+    .card__price--amount {
+        grid-column: 2;
+        grid-row: 2;
+        justify-self: end;
+    }
+
+    .card__price--show-details {
+        grid-column: 1;
+        grid-row: 1 / span 2;
+        align-self: flex-end;
+        padding: 0;
+    }
+
+    .card__btn {
+        width: 100%;
+        margin-top: 10px;
+    }
 }
