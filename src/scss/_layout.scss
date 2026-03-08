@@ -7,14 +7,29 @@
     justify-content: space-between;
     align-items: center;
     padding: 0 30px;
+    min-height: $header-height;
+    position: relative;
+
+    @include for-size (small-devices) {
+        padding: 0 20px;
+        min-height: 0;
+    }
 }
 
 .footer__logo {
     display: flex;
-    justify-content: center;
-    padding: 45px 20px;
+    padding: 45px 30px;
     background-color: $bg_color_primary;
     border-top: 1px solid $bg_color_secondary;
+
+    @include for-size (small-devices) {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    @include for-size(l-devices) {
+        justify-content: center;
+    }
 }
 
 .footer__copyright {
@@ -36,15 +51,22 @@
 }
 
 .container__wrapper {
-    padding: 20px;
+    @include for-size(small-devices) {
+        padding: 40px 20px 60px;
+    }
 
     @include for-size(tablet) {
+        padding: 60px 20px 80px;
         max-width: 724px;
         margin-right: auto;
         margin-left: auto;
     }
 
     @include for-size(m-devices) {
+        max-width: 971px;
+    }
+
+    @include for-size(l-devices) {
         max-width: 1107px;
     }
 }
