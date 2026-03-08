@@ -2,25 +2,22 @@
    #Show hidden checkboxes on button click
 \*-----------------------------------------*/
 
-const filter_group = document.querySelectorAll('.filter__group');
+const filterGroup = document.querySelectorAll('.filter__group');
+filterGroup.forEach(group => {
+    const hiddenFilter = group.querySelectorAll('.checkbox--hidden');
+    const button = group.querySelector('.filter__button--show-all');
 
-if (filter_group.length > 0) {
-    filter_group.forEach(group => {
-        const hiddenFilter = group.querySelectorAll('.checkbox--hidden');
-        const button = group.querySelector('.filter__button--show-all');
+    if (hiddenFilter.length === 0) {
+        button.style.display = 'none';
+    }
 
-        if (hiddenFilter.length === 0) {
-            button.style.display = 'none';
-        }
+    button.textContent = `Ver ${hiddenFilter.length} más`;
 
-        button.textContent = `Ver ${hiddenFilter.length} más`;
-
-        button.addEventListener('click', () => {
-            hiddenFilter.forEach(checkbox => checkbox.style.display = 'flex');
-            button.style.display = 'none';
-        })
-    });
-}
+    button.addEventListener('click', () => {
+        hiddenFilter.forEach(checkbox => checkbox.style.display = 'flex');
+        button.style.display = 'none';
+    })
+});
 
 
 /*------------------------------------------------------------*\
@@ -71,4 +68,54 @@ closeButtons.forEach(button => {
         dropdown.hidden = true;
         buttonsOpenDropdown.forEach(btn => btn.setAttribute('aria-expanded', 'false'));
     });
+});
+
+
+/*---------------------------*\
+   #Open responsive navigation
+\*---------------------------*/
+
+const burgerMenu = document.querySelector('.burger__menu');
+const navigation = document.querySelector('.nav');
+
+burgerMenu.addEventListener('click', () => {
+    burgerMenu.classList.toggle('burger__menu--close');
+    navigation.classList.toggle('nav--is-open');
+})
+
+
+/*--------------------------*\
+   #Open responsive filters
+\*---------------------------*/
+
+const buttonFilters = document.querySelector('.filters__devices');
+const sidebar = document.querySelector('.grid__col--sidebar');
+const filters = document.querySelector('.filters');
+const closeFilters = document.querySelector('.filters__close');
+
+const header = document.querySelector('.header');
+const slider = document.querySelector('.slider');
+const footer = document.querySelector('.footer');
+
+function setFiltersHeight() {
+    const pageHeight = document.documentElement.scrollHeight;
+
+    const headerHeight = header.offsetHeight;
+    const sliderHeight = slider.offsetHeight;
+    const footerHeight = footer.offsetHeight;
+
+    const filtersHeight = pageHeight - headerHeight - sliderHeight - footerHeight;
+
+    if (window.innerWidth <= 1127 && window.innerWidth >= 544) {
+        filters.style.height = `${filtersHeight}px`;
+    }
+}
+
+buttonFilters.addEventListener('click', () => {
+    setFiltersHeight()
+    sidebar.classList.toggle('grid__col--sidebar-is-open');
+})
+
+closeFilters.addEventListener('click', () => {
+    sidebar.classList.remove('grid__col--sidebar-is-open');
 });
