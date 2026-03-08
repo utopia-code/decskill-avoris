@@ -8,17 +8,18 @@
 
 nav.nav--is-open {
     .nav__menu {
-        right: 0;
+        transform: translate(0);
     }
 }
 
 .nav__menu {
     position: absolute;
     top: $header-height;
-    right: -100%;
+    right: 0;
     min-width: 33vw;
     background-color: #fff;
-    transition: .2s ease;
+    transform: translate(100%);
+    transition: transform .2s ease;
     z-index: 999;
 }
 
@@ -94,6 +95,14 @@ nav.nav--is-open {
         max-width: 120px;
         padding-top: 10px;
         padding-bottom: 10px;
+    }
+
+    .nav__menu {
+        top: $header-height-mobile;
+    }
+
+    .nav__link {
+        padding: 20px;
     }
 }
 

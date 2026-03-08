@@ -17,9 +17,11 @@ body {
     font-size: $font-size-base;
     font-weight: 400;
     color: $text_body;
-    max-width: $mq-xl;
     margin: 0 auto;
-    overflow-x: hidden;
+}
+
+html, body {
+    overflow-x: clip;
 }
 
 h1, h2, h3 {

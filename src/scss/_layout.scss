@@ -12,7 +12,7 @@
 
     @include for-size (small-devices) {
         padding: 0 20px;
-        min-height: 0;
+        min-height: $header-height-mobile;
     }
 }
 
