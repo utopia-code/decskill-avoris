@@ -89,3 +89,24 @@
         margin: 0;
     }
 }
+
+@include for-size(small-devices) {
+    .dropdown {
+        position: fixed;
+        border-radius: 0;
+        border: none;
+        width: 100%;
+        height: 100vh;
+        background-color: #fff;
+        z-index: 2000;
+    }
+
+    .dropdown__header,
+    .dropdown__footer {
+        border-radius: 0;
+    }
+
+    .dropdown__footer {
+        background-color: #fff;
+    }
+}
