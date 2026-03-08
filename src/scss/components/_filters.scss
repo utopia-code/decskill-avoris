@@ -68,6 +68,13 @@
     margin: 0;
     font-size: 1.2rem;
     color: inherit;
+
+    &:focus,
+    &:focus-within,
+    &:focus-visible {
+        border: none;
+        outline: none;
+    }
 }
 
 .filter__input--icon {

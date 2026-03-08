@@ -17,6 +17,10 @@
     }
 }
 
+.accordion__title {
+    cursor: pointer;
+}
+
 .accordion__icon {
     height: $size-icon;
     margin-right: 5px;

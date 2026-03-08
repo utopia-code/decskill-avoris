@@ -2,6 +2,7 @@
    #BASE
 \*------------------------------------*/
 
+@use "sass:color";
 
 * {
     box-sizing: border-box;
@@ -50,16 +51,25 @@ p {
     padding: 10px 30px;
     border-radius: 20px;
     transition: .15s ease;
+    cursor: pointer;
 
     &.btn__primary {
         background-color: $color_primary;
         color: $text_dark;
         border: none;
+
+        &:hover {
+            background-color: color.adjust($color_primary, $lightness: -10%);
+        }
     }
 
     &.btn__secondary {
         background-color: $color_secondary;
         color: $text_light;
+
+        &:hover {
+            background-color: color.adjust($color_secondary, $lightness: 10%);
+        }
     }
 
     &.btn__cta {
