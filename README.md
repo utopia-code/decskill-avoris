@@ -5,7 +5,7 @@ Según los objetivos de la prueba, se ha desarrollado una página web responsive
 
 ## Visualización del sitio web
 
-Netlify: https://decskill-avoris.netlify.app/
+Netlify: https://decskill-avoris.netlify.app/  
 GitHub: https://github.com/utopia-code/decskill-avoris
 
 Para visualizar el proyecto en local es necesario descomprimir el archivo, instalar `node_modules` con `npm install` y abrir el servidor local con `npm run dev`.
