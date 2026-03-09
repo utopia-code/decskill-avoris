@@ -88,26 +88,19 @@ burgerMenu.addEventListener('click', () => {
    #Open responsive filters
 \*---------------------------*/
 
-const buttonFilters = document.querySelector('.filters__devices');
+const buttonFilters = document.querySelector('.filters__devices--button');
 const sidebar = document.querySelector('.grid__col--sidebar');
 const filters = document.querySelector('.filters');
 const closeFilters = document.querySelector('.filters__close');
 
-const header = document.querySelector('.header');
-const slider = document.querySelector('.slider');
-const footer = document.querySelector('.footer');
+const container = document.querySelector('.container');
 
 function setFiltersHeight() {
-    const pageHeight = document.documentElement.scrollHeight;
-
-    const headerHeight = header.offsetHeight;
-    const sliderHeight = slider.offsetHeight;
-    const footerHeight = footer.offsetHeight;
-
-    const filtersHeight = pageHeight - headerHeight - sliderHeight - footerHeight;
+    const containerHeight = container.offsetHeight;
 
     if (window.innerWidth <= 1127 && window.innerWidth >= 544) {
-        filters.style.height = `${filtersHeight}px`;
+        filters.style.height = `${containerHeight}px`;
+        sidebar.style.height = `${containerHeight}px`;
     }
 }
 

@@ -102,6 +102,9 @@
 }
 
 @include for-size(small-devices) {
+    .filters {
+        height: 100vh;
+    }
 
     .filter__input {
         max-width: none;
