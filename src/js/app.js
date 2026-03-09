@@ -39,7 +39,7 @@ buttonsOpenDropdown.forEach(button => {
         dropdown.hidden = false;
         button.setAttribute('aria-expanded', 'true');
 
-        if (window.innerWidth >= 500) {
+        if (window.innerWidth >= 743.5) {
             const buttonRect = button.getBoundingClientRect();
             const top = buttonRect.bottom + window.scrollY;
             const left = buttonRect.left + window.scrollX;

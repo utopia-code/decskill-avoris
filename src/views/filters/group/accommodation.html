@@ -27,7 +27,7 @@
 
 <each loop="accommodation, index in accommodations">
     <div class="checkbox {{ index >8 ? 'checkbox--hidden' : '' }}">
-        <input lass="checkbox__input" type="checkbox" id="{{ accommodation.id }}" name="accommodations[]" value="{{ accommodation.id }}">
+        <input class="checkbox__input" type="checkbox" id="{{ accommodation.id }}" name="accommodations[]" value="{{ accommodation.id }}">
         <label class="checkbox__label" for="{{ accommodation.id }}">{{ accommodation.label }}</label>
         <div class="checkbox__tooltip--wrapper">
             <img class="checkbox__tooltip--icon" src="./assets/icons/info.svg" aria-label="Más información"></img>
