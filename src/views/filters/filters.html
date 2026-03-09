@@ -1,6 +1,6 @@
 <div class="filters">
     <header class="filters__header">
-        <h4 class="filters__title">Filtrar mi búsqueda</h4>
+        <div class="filters__title">Filtrar mi búsqueda</div>
         <button class="filters__close">
             <include src="./views/icons/close-svg.html"></include>
         </button>
@@ -73,7 +73,7 @@
                 </span>
             </summary>
 
-            <fielset class="accordion__content">
+            <fieldset class="accordion__content">
                 <legend class="filter__legend--hidden">Precio</legend>
 
                 <label class="filter__label filter__label--hidden" for="min-price">Mínimo</label>
@@ -92,7 +92,7 @@
                     <input class="filter__input filter__input--text" type="text" pattern="[0-9]*" id="max-price" placeholder="Máximo">
                 </div>
 
-            </fielset>
+            </fieldset>
         </details>
         
     </form>
