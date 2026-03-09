@@ -42,7 +42,7 @@ Se hace uso del preprocesador Sass aunque la mayoría de las reglas se han traba
 
 Para mantener los estilos organizados y facilitar la localización de las reglas y su mantenimiento se ha estructurado la carpeta `src/scss` de la siguiente manera:
 
-- `settings`: contiene variables, colores, tipografías y configuraciones globles.
+- `settings`: contiene variables, colores, tipografías y configuraciones globales.
 - `components`: incluye los estilos específicos de los componentes trabajados: navigation, heading, slider, accordion, filters, checkbox, cards y dropdown.
 - `base`: estilos base del proyecto como resets, normalizaciones y elementos con estilos preconfigurados.
 - `layout`: reglas relacionadas con la estructura de la página como header, footer, container.
@@ -66,4 +66,4 @@ Se ha añadido funcionalidad básica utilizando JavaScript Vanilla en el panel d
     * Dots slider: Las áreas táctiles no tienen un tamaño o un espaciado suficientes. 
     * H1-H3: Los elementos de encabezado no aparecen en orden secuencial descendente.
 
-Para mejorar la accesibilidad sería conveniente utilizar un color con más contraste en el subtítulo, separar los indicadores de diapositiva del slider, especialmente en dispositivos de menor tamaño, y replantear la estructura jerárquica de los títulos de la página para que siguan un orden descendente lógico.
+Para mejorar la accesibilidad sería conveniente utilizar un color con más contraste en el subtítulo, separar los indicadores de diapositiva del slider, especialmente en dispositivos de menor tamaño, y replantear la estructura jerárquica de los títulos de la página para que sigan un orden descendente lógico.
